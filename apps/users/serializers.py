@@ -1,5 +1,7 @@
 from django.contrib.auth.password_validation import validate_password
 from django.db import transaction
+from drf_spectacular.types import OpenApiTypes
+from drf_spectacular.utils import extend_schema_field
 from rest_framework import serializers
 
 from .models import User
@@ -125,6 +127,7 @@ class MeSerializer(serializers.ModelSerializer):
         )
         read_only_fields = ("id", "username", "role", "role_display", "avatar_url")
 
+    @extend_schema_field(OpenApiTypes.URI)
     def get_avatar_url(self, obj):
         if not obj.avatar:
             return None
