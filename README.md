@@ -164,3 +164,9 @@ python manage.py spectacular --validate --fail-on-warn --file schema.yml
 ```
 
 El pipeline de GitHub Actions ejecuta lint, verificación de migraciones, validación del esquema OpenAPI y los tests contra PostgreSQL en cada push.
+
+## Autor y derechos de autor
+
+Hank
+
+Copyright (c) 2026 Hank. Todos los derechos reservados. Ver [LICENSE](LICENSE).

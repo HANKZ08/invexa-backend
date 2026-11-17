@@ -1,4 +1,6 @@
 [project]
+authors = [{ name = "Hank" }]
+license = { text = "Proprietary" }
 name = "invexa-backend"
 version = "1.0.0"
 description = "API REST de inventario y punto de venta construida con Django REST Framework."
