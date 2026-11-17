@@ -2,7 +2,7 @@
 
 API REST de **inventario y punto de venta (POS)** para pequeños comercios: catálogo de productos, control de stock con kardex, ventas con factura en PDF, roles de usuario y dashboard de métricas.
 
-> Frontend (Vue.js): [`invexa-frontend`](../invexa-frontend)
+> Frontend (Vue.js): [`invexa-frontend`](https://github.com/HANKZ08/invexa-frontend)
 
 ![Python](https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-5.2_LTS-092E20?logo=django&logoColor=white)
