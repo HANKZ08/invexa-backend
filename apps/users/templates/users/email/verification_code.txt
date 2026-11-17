@@ -1,0 +1,18 @@
+Confirma tu correo
+
+Hola {{ user.first_name|default:user.username }}, {{ business_name }} creó una cuenta de Invexa para ti.
+Escribe este código en Invexa para activarla y elegir tu contraseña:
+
+    {{ code }}
+
+Vence en {{ minutes }} minutos y solo se puede usar una vez.
+
+Usuario: {{ user.username }}
+Correo:  {{ user.email }}
+Rol:     {{ user.get_role_display }}
+
+¿No esperabas este correo? Ignóralo: sin el código, la cuenta sigue inactiva.
+Nadie de {{ business_name }} te pedirá este código por teléfono, chat ni correo.
+
+--
+Recibes este mensaje porque un administrador de {{ business_name }} registró esta dirección en Invexa, el sistema de inventario y punto de venta del negocio.

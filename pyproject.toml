@@ -1,0 +1,24 @@
+[project]
+name = "invexa-backend"
+version = "1.0.0"
+description = "API REST de inventario y punto de venta construida con Django REST Framework."
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+python_files = ["test_*.py"]
+addopts = "-q --reuse-db"
+filterwarnings = ["ignore::DeprecationWarning", "ignore:No directory at:UserWarning"]
+
+[tool.coverage.run]
+source = ["apps"]
+omit = ["*/migrations/*", "*/tests/*", "*/management/*"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+extend-exclude = ["migrations"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "DJ", "SIM"]
+ignore = ["DJ001", "E501"]
