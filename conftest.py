@@ -11,6 +11,12 @@ PASSWORD = "Test-Pass-123"
 
 
 @pytest.fixture(autouse=True)
+def _no_https_redirect(settings):
+    # Las pruebas llaman a la API por HTTP; la redirección a HTTPS solo aplica en producción.
+    settings.SECURE_SSL_REDIRECT = False
+
+
+@pytest.fixture(autouse=True)
 def _tax_rate(settings):
     settings.INVEXA_TAX_RATE = 0.18
 
